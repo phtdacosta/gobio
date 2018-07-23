@@ -11,10 +11,7 @@ Minimal, fast, and native socket support for Windows NT 4.0 (and beyond) compati
 * Everything in **less than 300 lines of code**
 
 ## Benchmarks
-Siege 3.0.5 ```-b -t60s```
-OS: Windows 8.1 6.3.9600 
-CPU: Intel i3-4012Y 1.5GHz
-RAM: 4GB 1600MHz
+Siege 3.0.5 ```-b -t60s``` OS: **Windows 8.1 6.3.9600** CPU: **Intel i3-4012Y 1.5GHz** RAM: **4GB 1600MHz**
 
  Feature | NodeJS 10.0.0 | Gobio 1.0.0-beta
 --------|--------|--------
@@ -36,8 +33,8 @@ Shortest transaction       | 0.00 | 0.00
 Like Gobio, NodeJS main engine relies on the IOCP from the Windows API to pursue performance, but some core development decisions made it considerably slower.
 
 ## Quickstart
-The project file itself contains an usage example of an HTTP response, accessible at the address ```http://127.0.0.1:7070``` after the following steps:
-```c
+The source file itself contains an usage example of an HTTP response, accessible at the address ```http://127.0.0.1:7070``` after the following steps:
+```
 > git clone https://github.com/phtdacosta/gobio.git
 > cd gobio
 > gcc gobio.c -o gobio -lwsock32 -lws2_32
