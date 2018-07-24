@@ -12,23 +12,24 @@ Minimal, fast, and native socket support for Windows NT 4.0 (and beyond) compati
 
 ## Benchmarks
 Siege 3.0.5 ```-b -t60s``` OS: **Windows 8.1 6.3.9600** CPU: **Intel i3-4012Y 1.5GHz** RAM: **4GB 1600MHz**
+> UPDATED 07/24/2018
 
  Feature | NodeJS 10.0.0 | Gobio 1.0.0-beta
 --------|--------|--------
-Transactions      |          22331 hits  | **73189 hits**
+Transactions      |          22331 hits  | **85387 hits**
 Availability      |          100.00 % | 100.00 %
-Elapsed time      |          59.95 secs | 59.82 secs
-Data transferred  |          0.45 MB | 1.47 MB
+Elapsed time      |          59.95 secs | 59.21 secs
+Data transferred  |          0.45 MB | 2.77 MB
 Response time     |          0.00 secs | 0.00 secs
-Transaction rate  |          372.48 trans/sec | **1223.55 trans/sec**
-Throughput        |          0.01 MB/sec | 0.02 MB/s
-Concurrency       |          1.05 | 1.59
-Successful transactions    | 22346 | 73203
+Transaction rate  |          372.48 trans/sec | **1442.13 trans/sec**
+Throughput        |          0.01 MB/sec | 0.05 MB/s
+Concurrency       |          1.05 | 1.34
+Successful transactions    | 22346 | 85399
 Failed transactions        | 0 | 0
-Longest transaction        | 0.14 | 0.55
+Longest transaction        | 0.14 | 0.60
 Shortest transaction       | 0.00 | 0.00
 
-**Without any fine tuning or specific optimizations**, Gobio sucessfully handled **3.28x more requests/second** than the NodeJS counterpart.
+**Without any fine tuning or specific optimizations**, Gobio sucessfully handled **3.87x more requests/second** than the NodeJS counterpart.
 #### Why to test against NodeJS?
 Like Gobio, NodeJS main engine relies on the IOCP from the Windows API to pursue performance, but some core development decisions made it considerably slower.
 
